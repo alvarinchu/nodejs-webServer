@@ -15,11 +15,11 @@ app.get('/', function (req, res) {
     //res.send(`Hello World ${req.url}`);
 });
 
-app.post('/data', (req, res) => {
-    console.log(req.body);
-    console.log(req.params);
-    console.log(req.query);
-    res.send({ nombre: 'Álvaro', apellidos: 'Pérez Rodrigo' });
+app.get('/about', function (req, res) {
+    res.render('about', {
+        anio: new Date().getFullYear(),
+    });
+    //res.send(`Hello World ${req.url}`);
 });
 
 app.listen(3000, () => {
