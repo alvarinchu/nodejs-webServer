@@ -8,6 +8,8 @@ app.use(express.static('./public'));
 hbs.registerPartials(__dirname + '/views/partials', function (err) {});
 app.set('view engine', 'hbs');
 
+const port = process.env.port || 3000;
+
 // helpers
 
 app.get('/', function (req, res) {
@@ -20,6 +22,6 @@ app.get('/about', function (req, res) {
     //res.send(`Hello World ${req.url}`);
 });
 
-app.listen(3000, () => {
-    console.log('Escuchando en puerto 3000');
+app.listen(port, () => {
+    console.log('Escuchando en puerto ' + port);
 });
