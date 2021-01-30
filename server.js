@@ -8,7 +8,7 @@ app.use(express.static('./public'));
 hbs.registerPartials(__dirname + '/views/partials', function (err) {});
 app.set('view engine', 'hbs');
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 // helpers
 
